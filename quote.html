@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Antlara Dental – Personalized Treatment Offer</title>
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      a { text-decoration: none; color: #000; }
+      .page { page-break-inside: avoid; }
+      body { color: #000; }
+    }
+  </style>
+</head>
+<body style="margin:0; background-color:#F9FAFB; color:#111827; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji','Segoe UI Emoji'; line-height:1.5;">
+  <!-- ######################## -->
+  <!-- EMBEDDED OFFER JSON DATA -->
+  <!-- ######################## -->
+  <script type="application/json" id="offer-data">
+  {
+    "patient_name": "Vilena Poluyanova",
+    "date_prepared": "2025-09-26",
+    "currency": "USD",
+    "treatment_focus": "Full mouth zirconium crowns with implant removal",
+    "hotel_nights_total": "8",
+    "visits": [
+      {
+        "title": "Single Visit",
+        "hotel_nights": "8",
+        "bullets": [
+          "Zirconium Crown x16 (Upper Jaw)",
+          "Zirconium Crown x14 (Lower Jaw)",
+          "Remove of Implant x1"
+        ],
+        "item_label": "Treatment Plan",
+        "item_desc": "Zirconium crowns for upper & lower jaws, implant removal, 5 nights hotel",
+        "amount": "5936.00"
+      }
+    ],
+    "deposit_amount": "",
+    "visit1_pay_amount": "",
+    "visit2_pay_amount": "",
+    "price_valid_until": "",
+    "includes": [
+      "GumShield",
+      "Tomography",
+      "Injections",
+      "X-ray",
+      "All Transfers (Hotel-Clinic-Hotel)",
+      "VIP Transfer (Airport-Hotel-Airport)"
+    ],
+    "excludes": []
+  }
+  </script>
+
+  <!-- Top Bar / Actions -->
+  <div class="no-print" style="position:sticky; top:0; z-index:10; background:#FFFFFF; border-bottom:1px solid #E5E7EB;">
+    <div style="max-width:64rem; margin:0 auto; padding:12px 16px; display:flex; align-items:center; justify-content:space-between;">
+      <img id="clinic-logo" src="https://www.antlaradental.com/assets/img/logos/header-logo.png" alt="Antlara Dental Logo" style="height:32px; width:auto;" />
+      <div style="display:flex; gap:8px;">
+        <a href="#pricing" style="display:inline-block; padding:8px 12px; border-radius:10px; background:#111827; color:#FFFFFF; font-size:14px; text-decoration:none;">Jump to Pricing</a>
+        <button onclick="window.print()" style="padding:8px 12px; border-radius:10px; border:1px solid #E5E7EB; background:#FFFFFF; font-size:14px; cursor:pointer;">Print / Save as PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header style="background:#FFFFFF;">
+    <div style="max-width:64rem; margin:0 auto; padding:40px 24px;">
+      <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:24px; text-align:center;">
+        <div>
+          <h1 style="margin:0; font-size:24px; font-weight:700;">Antlara Dental Clinic</h1>
+          <p style="margin:4px 0 0; color:#4B5563;">Personalized Treatment Offer</p>
+          <p style="margin:8px 0 0; font-size:14px;">Prepared for: <span style="font-weight:600;" data-field="patient_name"></span></p>
+          <p style="margin:0; font-size:14px;">Date: <span style="font-weight:600;" data-field="date_prepared_fmt"></span></p>
+        </div>
+      </div>
+      <div style="margin-top:24px; font-size:14px; color:#4B5563; line-height:1.7;">
+        <p style="margin:0;">Thank you for your interest in dental care with Antlara Dental. Below is a clear summary of your recommended plan, pricing, what’s included, and next steps. Photos and videos are placeholders—replace them later.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Highlights -->
+  <section style="background:#F3F4F6;">
+    <div style="max-width:64rem; margin:0 auto; padding:32px 24px; display:grid; grid-template-columns:1fr; gap:16px;">
+      <!-- card 1 -->
+      <div class="page" style="background:#FFFFFF; border:1px solid #E5E7EB; border-radius:16px; padding:20px;">
+        <h3 style="margin:0; font-weight:600;">Treatment Focus</h3>
+        <p style="margin:6px 0 0; font-size:14px; color:#374151;"><span data-field="treatment_focus"></span></p>
+      </div>
+      <!-- card 2 -->
+      <div class="page" style="background:#FFFFFF; border:1px solid #E5E7EB; border-radius:16px; padding:20px;">
+        <h3 style="margin:0; font-weight:600;">Travel &amp; Stay</h3>
+        <p style="margin:6px 0 0; font-size:14px; color:#374151;"><span data-field="hotel_nights_total"></span> hotel nights included, clinic transfers (airport-hotel-clinic).</p>
+      </div>
+      <!-- card 3 -->
+      <div class="page" style="background:#FFFFFF; border:1px solid #E5E7EB; border-radius:16px; padding:20px;">
+        <h3 style="margin:0; font-weight:600;">All-In Transparency</h3>
+        <p style="margin:6px 0 0; font-size:14px; color:#374151;">All standard scans, injections and X-rays included. No surprise costs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatment Plan -->
+  <section id="plan" style="background:#FFFFFF;">
+    <div class="page" style="max-width:64rem; margin:0 auto; padding:40px 24px;">
+      <h2 style="margin:0; font-size:20px; font-weight:700;">1) Proposed Treatment Plan</h2>
+      <div id="visits-grid" style="margin-top:16px; display:grid; grid-template-columns:1fr; gap:24px;">
+        <!-- Visits injected here -->
+      </div>
+      <p style="margin-top:16px; font-size:14px; color:#4B5563;">Note: Timelines depend on healing and clinical findings. The plan above is a template—replace with the exact items from the offer.</p>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" style="background:#F9FAFB;">
+    <div class="page" style="max-width:64rem; margin:0 auto; padding:40px 24px;">
+      <h2 style="margin:0; font-size:20px; font-weight:700;">2) Pricing &amp; Payment Schedule</h2>
+
+      <div style="margin-top:16px; overflow-x:auto; border:1px solid #E5E7EB; border-radius:16px; background:#FFFFFF;">
+        <table style="width:100%; border-collapse:collapse; font-size:14px;">
+          <thead>
+            <tr style="background:#F3F4F6; color:#374151;">
+              <th style="text-align:left; padding:12px; border-bottom:1px solid #E5E7EB;">Item</th>
+              <th style="text-align:left; padding:12px; border-bottom:1px solid #E5E7EB;">Details</th>
+              <th style="text-align:right; padding:12px; border-bottom:1px solid #E5E7EB;">Amount (<span data-field="currency"></span>)</th>
+            </tr>
+          </thead>
+          <tbody id="pricing-rows">
+            <!-- Rows injected -->
+          </tbody>
+          <tfoot>
+            <tr style="background:#F9FAFB;">
+              <td style="padding:12px; font-weight:600;">Total</td>
+              <td style="padding:12px; color:#6B7280;">All included as listed</td>
+              <td id="total-amount" style="padding:12px; text-align:right; font-weight:700;"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <div style="margin-top:24px; display:grid; grid-template-columns:1fr; gap:24px;">
+        <div style="border:1px solid #E5E7EB; border-radius:16px; background:#FFFFFF; padding:20px;">
+          <h3 style="margin:0; font-weight:600;">What’s Included</h3>
+          <ul id="includes-list" style="margin:8px 0 0 0; padding-left:20px; color:#374151;">
+            <!-- includes injected -->
+          </ul>
+        </div>
+
+        <!-- Optional Excludes (present to avoid script errors) -->
+        <div style="border:1px solid #E5E7EB; border-radius:16px; background:#FFFFFF; padding:20px; display:none;">
+          <h3 style="margin:0; font-weight:600;">What’s Excluded</h3>
+          <ul id="excludes-list" style="margin:8px 0 0 0; padding-left:20px; color:#374151;"></ul>
+        </div>
+      </div>
+
+      <p style="margin-top:16px; font-size:12px; color:#6B7280;">*Exchange rates may affect non-USD payments.</p>
+    </div>
+  </section>
+
+  <!-- Travel & Logistics -->
+  <section style="background:#F9FAFB;">
+    <div class="page" style="max-width:64rem; margin:0 auto; padding:40px 24px;">
+      <h2 style="margin:0; font-size:20px; font-weight:700;">3) Travel &amp; Logistics</h2>
+      <div style="margin-top:16px; display:grid; grid-template-columns:1fr; gap:24px;">
+        <div style="border:1px solid #E5E7EB; border-radius:16px; background:#FFFFFF; padding:20px;">
+          <h3 style="margin:0; font-weight:600;">Hotel</h3>
+          <p style="margin:6px 0 0; font-size:14px; color:#374151;"><span data-field="hotel_nights_total"></span> hotel nights included as noted above. We can also help extend your stay on request.</p>
+        </div>
+        <div style="border:1px solid #E5E7EB; border-radius:16px; background:#FFFFFF; padding:20px;">
+          <h3 style="margin:0; font-weight:600;">Transfers</h3>
+          <p style="margin:6px 0 0; font-size:14px; color:#374151;">Airport ⇄ hotel ⇄ clinic transfers included. We’ll share driver details before your arrival.</p>
+        </div>
+      </div>
+      <p style="margin-top:16px; font-size:14px; color:#4B5563;">Please share flight details once booked so we can coordinate pickups.</p>
+    </div>
+  </section>
+
+  <!-- (Optional) Media Sections to match script targets; hidden by default) -->
+  <section style="display:none;">
+    <div style="max-width:64rem; margin:0 auto; padding:24px;">
+      <div id="gallery-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px;"></div>
+      <ul id="media-links" style="margin-top:12px; padding-left:16px;"></ul>
+      <iframe id="yt-embed" title="YouTube Embed" style="margin-top:12px; width:100%; height:360px; border:1px solid #E5E7EB; border-radius:12px;" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <footer style="background:#F3F4F6;">
+    <div style="max-width:64rem; margin:0 auto; padding:40px 24px;">
+      <div style="display:grid; grid-template-columns:1fr; gap:24px; align-items:center;">
+        <div>
+          <h2 style="margin:0; font-size:20px; font-weight:700;">Questions? We’re here to help.</h2>
+          <p style="margin:8px 0 0; font-size:14px; color:#374151;">Reply to this document with any edits you need. We can lock in dates, arrange transfers, and confirm hotel details right away.</p>
+          <div style="margin-top:16px; font-size:14px;">
+            <p style="margin:0; font-weight:600;">Antlara Dental Clinic</p>
+            <p style="margin:4px 0 0;">North America Phone: <a href="tel:+1437219644" style="text-decoration:underline; color:#111827;">(437) 219-644</a></p>
+            <p style="margin:0;">Email: <a href="mailto:antlara@antlaradental.com" style="text-decoration:underline; color:#111827;">antlara@antlaradental.com</a></p>
+          </div>
+        </div>
+        <div style="display:flex; gap:12px; justify-content:flex-start;">
+          <a class="no-print" href="https://wa.me/1437219644" target="_blank" rel="noopener" style="display:inline-block; padding:12px 16px; border-radius:12px; background:#059669; color:#FFFFFF; font-size:14px; text-decoration:none;">Chat on WhatsApp</a>
+          <button onclick="window.print()" class="no-print" style="padding:12px 16px; border-radius:12px; border:1px solid #E5E7EB; background:#FFFFFF; font-size:14px; cursor:pointer;">Print / Save as PDF</button>
+        </div>
+      </div>
+      <p style="margin-top:24px; font-size:12px; color:#6B7280;">© Antlara Dental Clinic. This is a template—replace placeholder images/text via the JSON at the top.</p>
+    </div>
+  </footer>
+
+  <!-- ######################## -->
+  <!-- RENDER SCRIPT (no deps) -->
+  <!-- ######################## -->
+  <script>
+    (function () {
+      const raw = document.getElementById('offer-data').textContent.trim();
+      /** @type {{
+        patient_name:string,date_prepared:string,currency:string,treatment_focus:string,
+        hotel_nights_total:number, visits:Array<{title:string,hotel_nights:number,bullets:string[],item_label:string,item_desc:string,amount:number}>,
+        deposit_amount:number, visit1_pay_amount:number, visit2_pay_amount:number,
+        price_valid_until:string, includes:string[], excludes:string[],
+        media:{logo:string,beforeAfter:string,gallery:string[],youtube_embed:string,links:Array<{label:string,href:string}>}
+      }} */
+      const data = JSON.parse(raw);
+
+      const fmtDate = (iso) => {
+        try {
+          const d = new Date(iso + (iso.length === 10 ? 'T00:00:00' : ''));
+          const formatter = new Intl.DateTimeFormat(undefined, { day:'2-digit', month:'long', year:'numeric' });
+          return formatter.format(d);
+        } catch { return iso; }
+      };
+
+      const fmtMoney = (n) => {
+        const cur = data.currency || 'USD';
+        try {
+          return new Intl.NumberFormat(undefined, { style:'currency', currency:cur, minimumFractionDigits:2 }).format(+n || 0);
+        } catch {
+          return (cur + ' ' + ((+n || 0).toFixed(2)));
+        }
+      };
+
+      // Simple field binder using [data-field]
+      const setText = (field, value) => {
+        document.querySelectorAll('[data-field="' + field + '"]').forEach(el => el.textContent = value ?? '');
+      };
+      const setImgSrc = (field, src) => {
+        const el = document.querySelector('[data-field="' + field + '"]');
+        if (el && src) el.src = src;
+      };
+
+      // Header
+      setText('patient_name', data.patient_name);
+      setText('date_prepared_fmt', fmtDate(data.date_prepared));
+      setText('currency', data.currency);
+      setText('treatment_focus', data.treatment_focus);
+      setText('hotel_nights_total', data.hotel_nights_total);
+      setImgSrc('logo_src', data.media?.logo);
+      setImgSrc('before_after_src', data.media?.beforeAfter);
+
+      // Visits (Plan)
+      const visitsGrid = document.getElementById('visits-grid');
+      visitsGrid.innerHTML = '';
+      (data.visits || []).forEach(v => {
+        const box = document.createElement('div');
+        box.style.cssText = 'border:1px solid #E5E7EB; border-radius:16px; padding:20px;';
+        box.innerHTML = ''
+          + '<h3 style="margin:0; font-weight:600;">' + v.title + '</h3>'
+          + '<ul style="margin:8px 0 0; padding-left:20px; font-size:14px; color:#374151;">'
+          + ( (v.bullets||[]).map(b=>'<li>'+ b +'</li>').join('') )
+          + '<li>Hotel: <span style="font-weight:500;">' + v.hotel_nights + '</span> nights</li>'
+          + '</ul>';
+        visitsGrid.appendChild(box);
+      });
+
+      // Pricing rows
+      const tbody = document.getElementById('pricing-rows');
+      tbody.innerHTML = '';
+      let total = 0;
+      (data.visits || []).forEach(v => {
+        total += (+v.amount || 0);
+        const tr = document.createElement('tr');
+        tr.innerHTML = ''
+          + '<td style="padding:12px; border-bottom:1px solid #F3F4F6;">' + (v.item_label || '') + '</td>'
+          + '<td style="padding:12px; border-bottom:1px solid #F3F4F6;">' + (v.item_desc || '') + '</td>'
+          + '<td style="padding:12px; text-align:right; border-bottom:1px solid #F3F4F6; font-weight:500;">' + fmtMoney(v.amount) + '</td>';
+        tbody.appendChild(tr);
+      });
+      document.getElementById('total-amount').textContent = fmtMoney(total);
+
+      // Payments
+      setText('deposit_fmt', data.deposit_amount ? fmtMoney(data.deposit_amount) : '—');
+      setText('visit1_pay_fmt', data.visit1_pay_amount ? fmtMoney(data.visit1_pay_amount) : '—');
+      setText('visit2_pay_fmt', data.visit2_pay_amount ? fmtMoney(data.visit2_pay_amount) : '—');
+
+      // Validity
+      setText('price_valid_until_fmt', fmtDate(data.price_valid_until));
+
+      // Includes / Excludes
+      const ulInc = document.getElementById('includes-list');
+      if (ulInc) ulInc.innerHTML = (data.includes || []).map(i=>'<li>'+ i +'</li>').join('');
+      const ulExc = document.getElementById('excludes-list');
+      if (ulExc) ulExc.innerHTML = (data.excludes || []).map(e=>'<li>'+ e +'</li>').join('');
+
+      // Gallery
+      const gal = document.getElementById('gallery-grid');
+      if (gal) gal.innerHTML = (data.media?.gallery || []).slice(0,3).map(src =>
+        '<img src="'+src+'" alt="Media" style="width:100%; height:12rem; object-fit:cover; border:1px solid #E5E7EB; border-radius:12px;">'
+      ).join('');
+
+      // Links
+      const linksUl = document.getElementById('media-links');
+      if (linksUl) linksUl.innerHTML = (data.media?.links || []).map(l =>
+        '<li><a href="'+ l.href +'" target="_blank" rel="noopener" style="color:#111827; text-decoration:underline;">'+ l.label +'</a></li>'
+      ).join('');
+
+      // Embed
+      const yt = document.getElementById('yt-embed');
+      if (yt && data.media?.youtube_embed) yt.src = data.media.youtube_embed;
+    })();
+  </script>
+</body>
+</html>
