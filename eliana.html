@@ -4,14 +4,13 @@
   <meta charset="utf-8" />
   <title>Dental Treatment Plan & Quotation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/style.css" />
-
+  <link rel="stylesheet" href="css/style.css" />
   <style>
-    
+    /* Add any custom styles here */
   </style>
 </head>
 <body>
-    <!-- Top Bar / Actions -->
+  <!-- Top Bar / Actions -->
   <div class="no-print" style="position:sticky; top:0; z-index:10; background:#FFFFFF; border-bottom:1px solid #E5E7EB;">
     <div style="max-width:64rem; margin:0 auto; padding:12px 16px; display:flex; align-items:center; justify-content:space-between;">
       <img id="clinic-logo" src="https://www.antlaradental.com/assets/img/logos/header-logo.png" alt="Antlara Dental Logo" style="height:32px; width:auto;" />
@@ -36,9 +35,9 @@
         <div id="p-focus" class="focus body">—</div>
       </div>
       <style>
-.focus-head{font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid #e5e7eb;margin-bottom:4px}
-.focus-body{font-weight:600}
-</style>
+        .focus-head{font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid #e5e7eb;margin-bottom:4px}
+        .focus-body{font-weight:600}
+      </style>
     </section>
 
     <!-- TOP ROW -->
@@ -48,9 +47,8 @@
         <div class="bd">
           <div id="visits-summary"></div>
           <div class="hr"></div>
-<div class="subhd">What’s Included</div>
-<ul id="includes-list" class="include-list"></ul>
-
+          <div class="subhd">What’s Included</div>
+          <ul id="includes-list" class="include-list"></ul>
         </div>
       </div>
 
@@ -96,141 +94,143 @@
           <div class="hr"></div>
           <div class="pill">Excludes / Optional</div>
           <ul id="excludes-list" class="bullets" style="margin-top:8px;"></ul>
-          <!-- <div class="warn" id="tbd-note" style="display:none;margin-top:10px;">
+          <div class="warn" id="tbd-note" style="display:none;margin-top:10px;">
             Some surgical extras (e.g., bone graft, membrane) are <strong>to be confirmed after scans</strong> and are not included in totals.
-          </div> -->
+          </div>
         </div>
       </div>
     </section>
     
     <!-- Extra Treatment (place this near the end of the page, after Clinical Notes) -->
-<section class="card extra-tx" id="extra-treatment">
-  <div class="hd">Implants — Extra Treatment</div>
-  <div class="bd">
-    <p class="muted">
-      In some cases, dental implant patients require extra treatment to ensure the jaw structure is strong enough to hold the implants.
-      Please find these below with their costs:
-    </p>
-
-    <!-- Price list -->
-    <table class="extra-table" aria-label="Extra treatment pricing">
-      <thead>
-        <tr>
-          <th>Treatment</th>
-          <th>Unit</th>
-          <th class="r">Price (USD)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Bone Grafting</td>
-          <td>per cc</td>
-          <td class="r">$160</td>
-        </tr>
-        <tr>
-          <td>Membrane</td>
-          <td>per unit</td>
-          <td class="r">$190</td>
-        </tr>
-        <tr>
-          <td>Sinus Lifting</td>
-          <td>each</td>
-          <td class="r">$200</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="hr"></div>
-
-    <p class="muted">
-      To determine if these are required our team needs to assess a Dental Panoramic X-ray.
-      If you travel for treatment we can provide the X-rays at the clinic and update the quote accordingly.
-      For a finalized quote before traveling, you can provide us with a recent 2D panoramic X-ray or 3D CBCT from your local dentist.
-    </p>
-
-    <ul class="bullets">
-      <li>Worst-case scenario: up to <strong>4 cc</strong> bone grafting, <strong>4 units</strong> membrane, and <strong>2</strong> sinus lifts.</li>
-    </ul>
-
-    <div class="cap-note">
-      We cap the total cost of extra required treatments at <strong>$1,200 USD</strong>.
-    </div>
-
-    <p class="muted">If you have any questions regarding these details please let us know.</p>
-  </div>
-</section>
-
+    <section class="card extra-tx" id="extra-treatment">
+      <div class="hd">Implants — Extra Treatment</div>
+      <div class="bd">
+        <p class="muted">
+          In some cases, dental implant patients require extra treatment to ensure the jaw structure is strong enough to hold the implants.
+          Please find these below with their costs:
+        </p>
+        <!-- Price list -->
+        <table class="extra-table" aria-label="Extra treatment pricing">
+          <thead>
+            <tr>
+              <th>Treatment</th>
+              <th>Unit</th>
+              <th class="r">Price (USD)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bone Grafting</td>
+              <td>per cc</td>
+              <td class="r">$160</td>
+            </tr>
+            <tr>
+              <td>Membrane</td>
+              <td>per unit</td>
+              <td class="r">$190</td>
+            </tr>
+            <tr>
+              <td>Sinus Lifting</td>
+              <td>each</td>
+              <td class="r">$200</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="hr"></div>
+        <p class="muted">
+          To determine if these are required our team needs to assess a Dental Panoramic X-ray.
+          If you travel for treatment we can provide the X-rays at the clinic and update the quote accordingly.
+          For a finalized quote before traveling, you can provide us with a recent 2D panoramic X-ray or 3D CBCT from your local dentist.
+        </p>
+        <ul class="bullets">
+          <li>Worst-case scenario: up to <strong>4 cc</strong> bone grafting, <strong>4 units</strong> membrane, and <strong>2</strong> sinus lifts.</li>
+        </ul>
+        <div class="cap-note">
+          We cap the total cost of extra required treatments at <strong>$1,200 USD</strong>.
+        </div>
+        <p class="muted">If you have any questions regarding these details please let us know.</p>
+      </div>
+    </section>
 
     <div style="display:flex; gap:12px; margin-top: 20px; justify-content:flex-start;">
-          <a class="no-print" href="https://wa.me/1437219644" target="_blank" rel="noopener" style="display:inline-block; padding:12px 16px; border-radius:12px; background:#059669; color:#FFFFFF; font-size:14px; text-decoration:none;">Chat on WhatsApp</a>
-          <button onclick="window.print()" class="no-print" style="padding:12px 16px; border-radius:12px; border:1px solid #E5E7EB; background:#FFFFFF; font-size:14px; cursor:pointer;">Print / Save as PDF</button>
-        </div>
+      <a class="no-print" href="https://wa.me/1437219644" target="_blank" rel="noopener" style="display:inline-block; padding:12px 16px; border-radius:12px; background:#059669; color:#FFFFFF; font-size:14px; text-decoration:none;">Chat on WhatsApp</a>
+      <button onclick="window.print()" class="no-print" style="padding:12px 16px; border-radius:12px; border:1px solid #E5E7EB; background:#FFFFFF; font-size:14px; cursor:pointer;">Print / Save as PDF</button>
+    </div>
 
     <p class="footnote" style="margin-top:14px;">
       Brand note: Implants are <strong>Straumann Group Medentika<sup>®</sup></strong>. Implant workflows are planned in <strong>two visits</strong>.
     </p>
+
+    <!-- ====== MISSING ELEMENTS ADDED BELOW ====== -->
+    <div style="margin-top:24px;">
+      <button id="toggle-notes" class="no-print" style="padding:8px 12px; border-radius:8px; border:1px solid #E5E7EB; background:#f3f4f6; font-size:14px; cursor:pointer;">Show Clinical Notes</button>
+      <div id="notes" style="display:none; margin-top:10px;">
+        <ul id="clinical-bullets" class="bullets"></ul>
+      </div>
+    </div>
+    <!-- ====== END OF MISSING ELEMENTS ====== -->
+
   </div>
 
   <!-- ==== SAMPLE DATA (replace with server-injected JSON) =================== -->
   <script id="plan-data" type="application/json">
-  {
-  "patient_name": "Eliana Matias",
-  "date_prepared": "2025-09-29",
-  "currency": "USD",
-  "treatment_focus": "Two-visit implant restoration: 3 Straumann Group Medentika® implants (Visit 1) and 4 zirconium crowns (Visit 2).",
-  "hotel_nights_total": 10,
-  "visits": [
-    {
-      "title": "First Visit (5 Days)",
-      "hotel_nights": 5,
-      "bullets": [
-        "Placement of 3 Straumann Group Medentika® implants",
-        "Bone graft and membrane may be required, confirmed after 3D scans (CBCT/OPG)",
-        "Full post-operative care and medications"
+      {
+      "patient_name": "Eliana Matias",
+      "date_prepared": "2025-09-29",
+      "currency": "USD",
+      "treatment_focus": "Two-visit implant restoration: 3 Straumann Group Medentika® implants (Visit 1) and 4 zirconium crowns (Visit 2).",
+      "hotel_nights_total": 10,
+      "visits": [
+        {
+          "title": "First Visit (5 Days)",
+          "hotel_nights": 5,
+          "bullets": [
+            "Placement of 3 Straumann Group Medentika® implants",
+            "Bone graft and membrane may be required, confirmed after 3D scans (CBCT/OPG)",
+            "Full post-operative care and medications"
+          ],
+          "line_items": [
+            { "label": "Straumann Group Medentika® Implant", "unit": "implant", "qty": 3, "unit_price": 900, "subtotal": 2700 },
+            { "label": "Hotel", "unit": "night", "qty": 5, "unit_price": 80, "subtotal": 400 },
+            { "label": "10% Cash Discount", "unit": "discount", "qty": 1, "unit_price": -310, "subtotal": -310 }
+          ],
+          "item_label": "Implant Placement",
+          "item_desc": "Surgical placement of 3 implants. Bone graft and membrane are additional if needed.",
+          "amount": 2790
+        },
+        {
+          "title": "Second Visit (5 Days, after 3–6 months)",
+          "hotel_nights": 5,
+          "bullets": [
+            "Placement of 3 zirconium crowns on the healed implants and 1 zirconium crown replacement for the older one",
+            "Adjustment of bite and aesthetics",
+            "Follow-up checks during the stay"
+          ],
+          "line_items": [
+            { "label": "Zirconium Crown", "unit": "crown", "qty": 4, "unit_price": 350, "subtotal": 1400 },
+            { "label": "Hotel", "unit": "night", "qty": 5, "unit_price": 80, "subtotal": 400 },
+            { "label": "10% Cash Discount", "unit": "discount", "qty": 1, "unit_price": -180, "subtotal": -180 }
+          ],
+          "item_label": "Crown Placement",
+          "item_desc": "4 zirconium crowns fitted onto the previously placed implants.",
+          "amount": 1620
+        }
       ],
-      "line_items": [
-        { "label": "Straumann Group Medentika® Implant", "unit": "implant", "qty": 3, "unit_price": 900, "subtotal": 2700 },
-        { "label": "Hotel", "unit": "night", "qty": 5, "unit_price": 80, "subtotal": 400 },
-        { "label": "10% Cash Discount", "unit": "discount", "qty": 1, "unit_price": -310, "subtotal": -310 }
+      "visit1_pay_amount": 2790,
+      "visit2_pay_amount": 1620,
+      "price_valid_until": "2025-12-31",
+      "includes": [
+        "3D CBCT scan tomography",
+        "2D OPG full panoramic X-ray",
+        "Gumshield (mouthguard)",
+        "All transfers (airport–hotel–airport, hotel–clinic–hotel)",
+        "All injections",
+        "All medications (including antibiotics, painkillers, anti-swelling pills, and post-op drugs)"
       ],
-      "item_label": "Implant Placement",
-      "item_desc": "Surgical placement of 3 implants. Bone graft and membrane are additional if needed.",
-      "amount": 2790
-    },
-    {
-      "title": "Second Visit (5 Days, after 3–6 months)",
-      "hotel_nights": 5,
-      "bullets": [
-        "Placement of 3 zirconium crowns on the healed implants and 1 zirconium crown replacement for the older one",
-        "Adjustment of bite and aesthetics",
-        "Follow-up checks during the stay"
-      ],
-      "line_items": [
-        { "label": "Zirconium Crown", "unit": "crown", "qty": 4, "unit_price": 350, "subtotal": 1400 },
-        { "label": "Hotel", "unit": "night", "qty": 5, "unit_price": 80, "subtotal": 400 },
-        { "label": "10% Cash Discount", "unit": "discount", "qty": 1, "unit_price": -180, "subtotal": -180 }
-      ],
-      "item_label": "Crown Placement",
-      "item_desc": "4 zirconium crowns fitted onto the previously placed implants.",
-      "amount": 1620
+      "excludes": [
+        "Flights"
+      ]
     }
-  ],
-  "visit1_pay_amount": 2790,
-  "visit2_pay_amount": 1620,
-  "price_valid_until": "2025-12-31",
-  "includes": [
-    "3D CBCT scan tomography",
-    "2D OPG full panoramic X-ray",
-    "Gumshield (mouthguard)",
-    "All transfers (airport–hotel–airport, hotel–clinic–hotel)",
-    "All injections",
-    "All medications (including antibiotics, painkillers, anti-swelling pills, and post-op drugs)"
-  ],
-  "excludes": [
-    "Flights"
-  ]
-}
-
   </script>
 
   <!-- ==== SCRIPT ============================================================ -->
@@ -260,15 +260,15 @@
       document.querySelectorAll('[data-field="currency"]').forEach(s => s.textContent = CURR);
 
       // Includes list
-const incList = document.getElementById('includes-list');
-if (incList){
-  incList.innerHTML = '';
-  (data.includes || []).forEach(x=>{
-    const li = document.createElement('li');
-    li.textContent = x;
-    incList.appendChild(li);
-  });
-}
+      const incList = document.getElementById('includes-list');
+      if (incList){
+        incList.innerHTML = '';
+        (data.includes || []).forEach(x=>{
+          const li = document.createElement('li');
+          li.textContent = x;
+          incList.appendChild(li);
+        });
+      }
 
       // Payment milestones
       text(document.getElementById('deposit'), data.deposit_amount!=null? fmtMoney(data.deposit_amount, CURR): '—');
@@ -400,6 +400,7 @@ if (incList){
       const now = (box.style.display === 'none' || box.style.display === '') ? 'block' : 'none';
       box.style.display = now;
       e.currentTarget.setAttribute('aria-pressed', String(now==='block'));
+      e.currentTarget.textContent = now === 'block' ? 'Hide Clinical Notes' : 'Show Clinical Notes';
     });
 
     render();

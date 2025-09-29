@@ -2,33 +2,32 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Plan de Tratamiento Dental y Presupuesto</title>
+  <title>Plan de Tratamiento Dental y Cotización</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    
+    /* Agregue estilos personalizados aquí */
   </style>
 </head>
 <body>
   <!-- Barra superior / Acciones -->
   <div class="no-print" style="position:sticky; top:0; z-index:10; background:#FFFFFF; border-bottom:1px solid #E5E7EB;">
     <div style="max-width:64rem; margin:0 auto; padding:12px 16px; display:flex; align-items:center; justify-content:space-between;">
-      <img id="clinic-logo" src="https://www.antlaradental.com/assets/img/logos/header-logo.png" alt="Logotipo Antlara Dental" style="height:32px; width:auto;" />
+      <img id="clinic-logo" src="https://www.antlaradental.com/assets/img/logos/header-logo.png" alt="Antlara Dental Logo" style="height:32px; width:auto;" />
       <div style="display:flex; gap:8px;">
         <button onclick="window.print()" style="padding:8px 12px; border-radius:10px; border:1px solid #E5E7EB; background:#FFFFFF; font-size:14px; cursor:pointer;">Imprimir / Guardar como PDF</button>
       </div>
     </div>
   </div>
-
   <div class="wrap">
     <!-- ENCABEZADO -->
     <section class="hero">
-      <h1>Plan de Tratamiento Dental y Presupuesto</h1>
+      <h1>Plan de Tratamiento Dental y Cotización</h1>
       <div class="meta" role="list">
         <span role="listitem">Paciente: <strong id="p-name">—</strong></span>
         <span role="listitem">Fecha: <strong id="p-date">—</strong></span>
         <span role="listitem">Moneda: <strong id="p-currency">—</strong></span>
-        <!-- <span role="listitem">Noches totales de hotel: <strong id="p-hotel">—</strong></span> -->
+        <!-- <span role="listitem">Total de noches de hotel: <strong id="p-hotel">—</strong></span> -->
       </div>
       <div class="hr"></div>
       <div class="focus-row">
@@ -61,23 +60,23 @@
           <div class="kv"><div class="k">Pago en la Visita 2</div><div id="visit2pay">—</div></div>
           <div class="kv"><div class="k">Precio válido hasta</div><div id="p-valid">—</div></div>
           <div class="hr"></div>
-          <div class="footnote">Los importes se muestran en la moneda seleccionada. Los elementos opcionales listados en “Exclusiones” no están incluidos en los totales.</div>
+          <div class="footnote">Los importes se muestran en la moneda seleccionada. Los elementos opcionales listados en “Excluidos” no están incluidos en los totales.</div>
         </div>
       </div>
     </section>
 
     <!-- PRECIOS -->
     <section class="card" style="margin-top:14px;">
-      <div class="hd">Precios Detallados</div>
+      <div class="hd">Detalle de Precios</div>
       <div class="bd">
         <table aria-label="Tabla de precios detallados">
           <thead>
             <tr>
-              <th>Ítem</th>
+              <th>Concepto</th>
               <th>Detalles</th>
               <th class="r">Cant.</th>
               <th>Unidad</th>
-              <th class="r">Precio unitario (<span data-field="currency"></span>)</th>
+              <th class="r">Precio Unitario (<span data-field="currency"></span>)</th>
               <th class="r">Subtotal (<span data-field="currency"></span>)</th>
             </tr>
           </thead>
@@ -93,26 +92,25 @@
 
         <div id="excludes-wrap" style="margin-top:16px; display:none;">
           <div class="hr"></div>
-          <div class="pill">Exclusiones / Opcional</div>
+          <div class="pill">Excluidos / Opcional</div>
           <ul id="excludes-list" class="bullets" style="margin-top:8px;"></ul>
-          <!-- <div class="warn" id="tbd-note" style="display:none;margin-top:10px;">
-            Algunos extras quirúrgicos (p. ej., injerto óseo, membrana) están <strong>pendientes de confirmación tras los escáneres</strong> y no se incluyen en los totales.
-          </div> -->
+          <div class="warn" id="tbd-note" style="display:none;margin-top:10px;">
+            Algunos extras quirúrgicos (por ejemplo, injerto óseo, membrana) <strong>se confirmarán después de las radiografías</strong> y no están incluidos en los totales.
+          </div>
         </div>
       </div>
     </section>
     
-    <!-- Tratamiento Extra (ubicar cerca del final, después de Notas Clínicas) -->
+    <!-- Tratamiento Extra -->
     <section class="card extra-tx" id="extra-treatment">
       <div class="hd">Implantes — Tratamiento Extra</div>
       <div class="bd">
         <p class="muted">
-          En algunos casos, los pacientes con implantes dentales requieren tratamientos extra para asegurar que la estructura ósea sea lo suficientemente fuerte para sostener los implantes.
-          A continuación encontrarás estos tratamientos con sus costos:
+          En algunos casos, los pacientes de implantes dentales requieren tratamiento adicional para asegurar que la estructura mandibular sea lo suficientemente fuerte para soportar los implantes.
+          Por favor, consulte los siguientes tratamientos y sus costos:
         </p>
-
         <!-- Lista de precios -->
-        <table class="extra-table" aria-label="Precios de tratamientos extra">
+        <table class="extra-table" aria-label="Precios de tratamiento extra">
           <thead>
             <tr>
               <th>Tratamiento</th>
@@ -138,24 +136,19 @@
             </tr>
           </tbody>
         </table>
-
         <div class="hr"></div>
-
         <p class="muted">
-          Para determinar si son necesarios, nuestro equipo debe evaluar una radiografía panorámica dental.
-          Si viajas para el tratamiento, podemos realizar las radiografías en la clínica y actualizar el presupuesto en consecuencia.
-          Para un presupuesto final antes de viajar, puedes proporcionarnos una radiografía panorámica 2D reciente o una CBCT 3D de tu dentista local.
+          Para determinar si estos son necesarios, nuestro equipo debe evaluar una radiografía panorámica dental.
+          Si viaja para el tratamiento, podemos proporcionarle las radiografías en la clínica y actualizar la cotización en consecuencia.
+          Para una cotización final antes de viajar, puede proporcionarnos una radiografía panorámica 2D reciente o una CBCT 3D de su dentista local.
         </p>
-
         <ul class="bullets">
-          <li>Escenario más exigente: hasta <strong>4 cc</strong> de injerto óseo, <strong>4 unidades</strong> de membrana y <strong>2</strong> elevaciones de seno.</li>
+          <li>En el peor de los casos: hasta <strong>4 cc</strong> de injerto óseo, <strong>4 unidades</strong> de membrana y <strong>2</strong> elevaciones de seno.</li>
         </ul>
-
         <div class="cap-note">
           Limitamos el costo total de los tratamientos extra requeridos a <strong>$1,200 USD</strong>.
         </div>
-
-        <p class="muted">Si tienes cualquier duda sobre estos detalles, por favor háznoslo saber.</p>
+        <p class="muted">Si tiene alguna pregunta sobre estos detalles, por favor háganoslo saber.</p>
       </div>
     </section>
 
@@ -165,78 +158,86 @@
     </div>
 
     <p class="footnote" style="margin-top:14px;">
-      Nota de marca: Los implantes son <strong>Straumann Group Medentika<sup>®</sup></strong>. Los flujos de trabajo del implante se planifican en <strong>dos visitas</strong>.
+      Nota de marca: Los implantes son <strong>Straumann Group Medentika<sup>®</sup></strong>. Los procedimientos de implantes se planifican en <strong>dos visitas</strong>.
     </p>
+
+    <!-- ====== ELEMENTOS AGREGADOS ====== -->
+    <div style="margin-top:24px;">
+      <button id="toggle-notes" class="no-print" style="padding:8px 12px; border-radius:8px; border:1px solid #E5E7EB; background:#f3f4f6; font-size:14px; cursor:pointer;">Mostrar Notas Clínicas</button>
+      <div id="notes" style="display:none; margin-top:10px;">
+        <ul id="clinical-bullets" class="bullets"></ul>
+      </div>
+    </div>
+    <!-- ====== FIN ELEMENTOS AGREGADOS ====== -->
+
   </div>
 
-  <!-- ==== DATOS DE MUESTRA (reemplazar con JSON del servidor) =================== -->
+  <!-- ==== DATOS DE EJEMPLO (puede traducir los valores si lo desea) =================== -->
   <script id="plan-data" type="application/json">
-  {
-    "patient_name": "Eliana Matias",
-    "date_prepared": "2025-09-29",
-    "currency": "USD",
-    "treatment_focus": "Restauración con implantes en dos visitas: 3 implantes Straumann Group Medentika® (Visita 1) y 4 coronas de zirconio (Visita 2).",
-    "hotel_nights_total": 10,
-    "visits": [
       {
-        "title": "Primera Visita (5 días)",
-        "hotel_nights": 5,
-        "bullets": [
-          "Colocación de 3 implantes Straumann Group Medentika®",
-          "Puede requerirse injerto óseo y membrana, confirmado tras escáneres 3D (CBCT/OPG)",
-          "Cuidado postoperatorio completo y medicación"
-        ],
-        "line_items": [
-          { "label": "Implante Straumann Group Medentika®", "unit": "implante", "qty": 3, "unit_price": 900, "subtotal": 2700 },
-          { "label": "Hotel", "unit": "noche", "qty": 5, "unit_price": 80, "subtotal": 400 },
-          { "label": "Descuento en efectivo 10%", "unit": "descuento", "qty": 1, "unit_price": -310, "subtotal": -310 }
-        ],
-        "item_label": "Colocación de Implantes",
-        "item_desc": "Colocación quirúrgica de 3 implantes. Injerto óseo y membrana se añaden si son necesarios.",
-        "amount": 2790
-      },
-      {
-        "title": "Segunda Visita (5 días, después de 3–6 meses)",
-        "hotel_nights": 5,
-        "bullets": [
-          "Colocación de 3 coronas de zirconio sobre implantes cicatrizados y 1 reemplazo de corona antigua de zirconio",
-          "Ajuste de mordida y estética",
-          "Revisiones durante la estancia"
-        ],
-        "line_items": [
-          { "label": "Corona de zirconio", "unit": "corona", "qty": 4, "unit_price": 350, "subtotal": 1400 },
-          { "label": "Hotel", "unit": "noche", "qty": 5, "unit_price": 80, "subtotal": 400 },
-          { "label": "Descuento en efectivo 10%", "unit": "descuento", "qty": 1, "unit_price": -180, "subtotal": -180 }
-        ],
-        "item_label": "Colocación de Coronas",
-        "item_desc": "4 coronas de zirconio colocadas sobre los implantes previamente instalados.",
-        "amount": 1620
-      }
-    ],
-    "visit1_pay_amount": 2790,
-    "visit2_pay_amount": 1620,
-    "price_valid_until": "2025-12-31",
-    "includes": [
-      "Tomografía CBCT 3D",
-      "Radiografía panorámica OPG 2D",
-      "Protector bucal (férula)",
-      "Todos los traslados (aeropuerto–hotel–aeropuerto, hotel–clínica–hotel)",
-      "Todas las inyecciones",
-      "Toda la medicación (incluidos antibióticos, analgésicos, antiinflamatorios y fármacos postoperatorios)"
-    ],
-    "excludes": [
-      "Vuelos"
-    ]
-  }
-  </script>
-
+      "patient_name": "Eliana Matias",
+      "date_prepared": "2025-09-29",
+      "currency": "USD",
+      "treatment_focus": "Restauración con implantes en dos visitas: 3 implantes Straumann Group Medentika® (Visita 1) y 4 coronas de zirconio (Visita 2).",
+      "hotel_nights_total": 10,
+      "visits": [
+        {
+          "title": "Primera Visita (5 Días)",
+          "hotel_nights": 5,
+          "bullets": [
+            "Colocación de 3 implantes Straumann Group Medentika®",
+            "Puede requerirse injerto óseo y membrana, confirmado tras radiografías 3D (CBCT/OPG)",
+            "Cuidado postoperatorio completo y medicamentos"
+          ],
+          "line_items": [
+            { "label": "Implante Straumann Group Medentika®", "unit": "implante", "qty": 3, "unit_price": 900, "subtotal": 2700 },
+            { "label": "Hotel", "unit": "noche", "qty": 5, "unit_price": 80, "subtotal": 400 },
+            { "label": "10% Descuento por pago en efectivo", "unit": "descuento", "qty": 1, "unit_price": -310, "subtotal": -310 }
+          ],
+          "item_label": "Colocación de Implantes",
+          "item_desc": "Colocación quirúrgica de 3 implantes. Injerto óseo y membrana son adicionales si se requieren.",
+          "amount": 2790
+        },
+        {
+          "title": "Segunda Visita (5 Días, después de 3–6 meses)",
+          "hotel_nights": 5,
+          "bullets": [
+            "Colocación de 3 coronas de zirconio en los implantes cicatrizados y 1 corona de zirconio de reemplazo para la anterior",
+            "Ajuste de mordida y estética",
+            "Revisiones de seguimiento durante la estancia"
+          ],
+          "line_items": [
+            { "label": "Corona de zirconio", "unit": "corona", "qty": 4, "unit_price": 350, "subtotal": 1400 },
+            { "label": "Hotel", "unit": "noche", "qty": 5, "unit_price": 80, "subtotal": 400 },
+            { "label": "10% Descuento por pago en efectivo", "unit": "descuento", "qty": 1, "unit_price": -180, "subtotal": -180 }
+          ],
+          "item_label": "Colocación de Coronas",
+          "item_desc": "4 coronas de zirconio colocadas sobre los implantes previamente colocados.",
+          "amount": 1620
+        }
+      ],
+      "visit1_pay_amount": 2790,
+      "visit2_pay_amount": 1620,
+      "price_valid_until": "2025-12-31",
+      "includes": [
+        "Tomografía CBCT 3D",
+        "Radiografía panorámica OPG 2D",
+        "Protector bucal",
+        "Todos los traslados (aeropuerto–hotel–aeropuerto, hotel–clínica–hotel)",
+        "Todas las inyecciones",
+        "Todos los medicamentos (incluyendo antibióticos, analgésicos, antiinflamatorios y medicamentos postoperatorios)"
+      ],
+      "excludes": [
+        "Vuelos"
+      ]
+    }
   </script>
 
   <!-- ==== SCRIPT ============================================================ -->
   <script>
     function fmtMoney(n,curr){
       try{
-        return new Intl.NumberFormat(undefined,{style:'currency',currency:curr||'USD',maximumFractionDigits:0}).format(+n||0);
+        return new Intl.NumberFormat('es-ES',{style:'currency',currency:curr||'USD',maximumFractionDigits:0}).format(+n||0);
       }catch(e){
         return (curr||'USD')+' '+((+n||0).toFixed(0));
       }
@@ -248,34 +249,34 @@
       const data = raw ? JSON.parse(raw) : {};
       const CURR = data.currency || 'USD';
 
-      // Header
+      // Encabezado
       text(document.getElementById('p-name'), data.patient_name);
       text(document.getElementById('p-date'), data.date_prepared);
       text(document.getElementById('p-currency'), CURR);
       text(document.getElementById('p-hotel'), data.hotel_nights_total ?? '—');
       text(document.getElementById('p-focus'), data.treatment_focus || '—');
 
-      // Currency markers
+      // Moneda
       document.querySelectorAll('[data-field="currency"]').forEach(s => s.textContent = CURR);
 
-      // Includes list
-const incList = document.getElementById('includes-list');
-if (incList){
-  incList.innerHTML = '';
-  (data.includes || []).forEach(x=>{
-    const li = document.createElement('li');
-    li.textContent = x;
-    incList.appendChild(li);
-  });
-}
+      // Lista de incluidos
+      const incList = document.getElementById('includes-list');
+      if (incList){
+        incList.innerHTML = '';
+        (data.includes || []).forEach(x=>{
+          const li = document.createElement('li');
+          li.textContent = x;
+          incList.appendChild(li);
+        });
+      }
 
-      // Payment milestones
+      // Hitos de pago
       text(document.getElementById('deposit'), data.deposit_amount!=null? fmtMoney(data.deposit_amount, CURR): '—');
       text(document.getElementById('visit1pay'), data.visit1_pay_amount!=null? fmtMoney(data.visit1_pay_amount, CURR): '—');
       text(document.getElementById('visit2pay'), data.visit2_pay_amount!=null? fmtMoney(data.visit2_pay_amount, CURR): '—');
       text(document.getElementById('p-valid'), data.price_valid_until || '—');
 
-      // Visits summary
+      // Resumen de visitas
       const vs = document.getElementById('visits-summary');
       vs.innerHTML = '';
       (data.visits || []).forEach((v, idx)=>{
@@ -283,7 +284,7 @@ if (incList){
         wrap.style.marginBottom='10px';
         const t = document.createElement('div');
         t.className='visit-hd';
-        t.textContent = v.title || `Visit ${idx+1}`;
+        t.textContent = v.title || `Visita ${idx+1}`;
         wrap.appendChild(t);
 
         const ul = document.createElement('ul');
@@ -296,13 +297,13 @@ if (incList){
         vs.appendChild(wrap);
       });
 
-      // Pricing rows (responsive)
+      // Filas de precios
       const tbody = document.getElementById('pricing-rows');
       tbody.innerHTML = '';
       let total = 0;
 
       (data.visits || []).forEach(v=>{
-        // Section header row per visit
+        // Fila de encabezado por visita
         const head = document.createElement('tr');
         head.className = 'header-row';
         head.innerHTML = `
@@ -323,41 +324,41 @@ if (incList){
             visitSum += sub;
             const row = document.createElement('tr');
             row.innerHTML = `
-              <td data-label="Item">${li.label || ''}</td>
-              <td data-label="Details" class="muted"></td>
-              <td data-label="Qty" class="r">${li.qty ?? ''}</td>
-              <td data-label="Unit">${li.unit || ''}</td>
-              <td data-label="Unit Price" class="r">${fmtMoney(li.unit_price || 0, CURR)}</td>
+              <td data-label="Concepto">${li.label || ''}</td>
+              <td data-label="Detalles" class="muted"></td>
+              <td data-label="Cant." class="r">${li.qty ?? ''}</td>
+              <td data-label="Unidad">${li.unit || ''}</td>
+              <td data-label="Precio Unitario" class="r">${fmtMoney(li.unit_price || 0, CURR)}</td>
               <td data-label="Subtotal" class="r" style="font-weight:600">${fmtMoney(sub, CURR)}</td>
             `;
             tbody.appendChild(row);
           });
         } else {
-          // Fallback single amount row if no line items provided
+          // Fila de cantidad única si no hay line_items
           const amt = +v.amount || 0;
           visitSum = amt;
           const row = document.createElement('tr');
           row.innerHTML = `
-            <td data-label="Item">Visit Subtotal</td>
-            <td data-label="Details" class="muted"></td>
-            <td data-label="Qty" class="r"></td>
-            <td data-label="Unit"></td>
-            <td data-label="Unit Price" class="r"></td>
+            <td data-label="Concepto">Subtotal de la Visita</td>
+            <td data-label="Detalles" class="muted"></td>
+            <td data-label="Cant." class="r"></td>
+            <td data-label="Unidad"></td>
+            <td data-label="Precio Unitario" class="r"></td>
             <td data-label="Subtotal" class="r" style="font-weight:600">${fmtMoney(amt, CURR)}</td>
           `;
           tbody.appendChild(row);
         }
 
-        // Subtotal row per visit
+        // Fila de subtotal por visita
         const sumRow = document.createElement('tr');
         sumRow.innerHTML = `
           <td data-label=" "></td><td data-label=" "></td><td data-label=" "></td><td data-label=" "></td>
-          <td data-label="Visit Total" class="r" style="font-weight:700">Visit Total</td>
+          <td data-label="Total de la Visita" class="r" style="font-weight:700">Total de la Visita</td>
           <td data-label=" " class="r" style="font-weight:800">${fmtMoney(visitSum, CURR)}</td>
         `;
         tbody.appendChild(sumRow);
 
-        // Spacer (hidden on mobile)
+        // Espaciador
         const sp = document.createElement('tr');
         sp.className = 'spacer';
         sp.innerHTML = `<td colspan="6" style="border:0;height:8px"></td>`;
@@ -368,7 +369,7 @@ if (incList){
 
       document.getElementById('total-amount').textContent = fmtMoney(total, CURR);
 
-      // Excludes / optional
+      // Excluidos / opcional
       const exWrap = document.getElementById('excludes-wrap');
       const exList = document.getElementById('excludes-list');
       const tbd    = document.getElementById('tbd-note');
@@ -378,12 +379,12 @@ if (incList){
       (data.excludes || []).forEach(x=>{
         const li = document.createElement('li'); li.textContent = x; exList.appendChild(li);
         hasEx = true;
-        if (/(to be confirmed|TBD|confirm)/i.test(x)) hasTBD = true;
+        if (/(to be confirmed|TBD|confirm|confirmar)/i.test(x)) hasTBD = true;
       });
       exWrap.style.display = hasEx ? '' : 'none';
       tbd.style.display = hasTBD ? '' : 'none';
 
-      // Clinical notes
+      // Notas clínicas
       const notes = document.getElementById('clinical-bullets');
       notes.innerHTML = '';
       (data.visits || []).forEach(v=>{
@@ -393,12 +394,13 @@ if (incList){
       });
     }
 
-    // UI toggles
+    // Alternar notas clínicas
     document.getElementById('toggle-notes').addEventListener('click', (e)=>{
       const box = document.getElementById('notes');
       const now = (box.style.display === 'none' || box.style.display === '') ? 'block' : 'none';
       box.style.display = now;
       e.currentTarget.setAttribute('aria-pressed', String(now==='block'));
+      e.currentTarget.textContent = now === 'block' ? 'Ocultar Notas Clínicas' : 'Mostrar Notas Clínicas';
     });
 
     render();
