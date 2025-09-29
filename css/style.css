@@ -376,6 +376,8 @@ th.r {
     border-color: #c7d2fe;
     /* indigo-200 */
     box-shadow: 0 2px 6px rgba(23, 23, 23, .04);
+    margin-top: 10px;
+
 }
 
 .card.extra-tx .hd {
