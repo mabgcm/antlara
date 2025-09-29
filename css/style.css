@@ -368,3 +368,134 @@ th.r {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
+
+/* ========== Extra Treatment section styling ========== */
+
+/* Card accent for the extra treatment block */
+.card.extra-tx {
+    border-color: #c7d2fe;
+    /* indigo-200 */
+    box-shadow: 0 2px 6px rgba(23, 23, 23, .04);
+}
+
+.card.extra-tx .hd {
+    background: linear-gradient(180deg, #eef2ff, #ffffff 60%);
+    border-bottom: 1px solid #e5e7eb;
+    color: #111827;
+    font-weight: 700;
+}
+
+/* Intro / body text spacing */
+.card.extra-tx .bd>p {
+    margin: 8px 0 10px;
+}
+
+/* “Capped total” highlight */
+.cap-note {
+    margin: 10px 0 12px;
+    padding: 12px 14px;
+    border: 1px solid #86efac;
+    /* green-300 */
+    background: #ecfdf5;
+    /* green-50  */
+    color: #065f46;
+    /* green-800 */
+    border-radius: 12px;
+    font-weight: 650;
+}
+
+/* Extra treatment price table */
+.extra-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #fff;
+    margin: 12px 0;
+}
+
+.extra-table thead th {
+    text-align: left;
+    background: #f8fafc;
+    color: #334155;
+    /* slate-700 */
+    font-weight: 650;
+    padding: 12px 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.extra-table td {
+    padding: 12px 14px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #0f172a;
+    vertical-align: top;
+}
+
+.extra-table tr:last-child td {
+    border-bottom: none;
+}
+
+.extra-table td.r,
+.extra-table th.r {
+    text-align: right;
+}
+
+/* Subtle hover on desktop */
+@media (hover:hover) {
+    .extra-table tbody tr:hover {
+        background: #f9fafb;
+    }
+}
+
+/* Responsive: stack rows as cards on small screens */
+@media (max-width:720px) {
+    .extra-table thead {
+        display: none;
+    }
+
+    .extra-table,
+    .extra-table tbody,
+    .extra-table tr,
+    .extra-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .extra-table {
+        border: none;
+        border-radius: 0;
+    }
+
+    .extra-table tbody tr {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        margin: 10px 0;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .02);
+    }
+
+    .extra-table td {
+        border-bottom: 1px dashed #f1f5f9;
+        padding: 10px 12px;
+    }
+
+    .extra-table td:last-child {
+        border-bottom: none;
+    }
+
+    /* Mobile labels */
+    .extra-table td[data-label]::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 12px;
+        color: #6b7280;
+        margin-bottom: 4px;
+    }
+}
+
+/* Optional: convert table cells to labeled blocks on mobile
+   (If you want automatic labels, add data-label attributes in HTML)
+   <td data-label="Treatment">Bone Grafting</td> etc.
+*/
