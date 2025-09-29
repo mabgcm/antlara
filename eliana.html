@@ -96,9 +96,9 @@
           <div class="hr"></div>
           <div class="pill">Excludes / Optional</div>
           <ul id="excludes-list" class="bullets" style="margin-top:8px;"></ul>
-          <div class="warn" id="tbd-note" style="display:none;margin-top:10px;">
+          <!-- <div class="warn" id="tbd-note" style="display:none;margin-top:10px;">
             Some surgical extras (e.g., bone graft, membrane) are <strong>to be confirmed after scans</strong> and are not included in totals.
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -125,62 +125,63 @@
   <!-- ==== SAMPLE DATA (replace with server-injected JSON) =================== -->
   <script id="plan-data" type="application/json">
   {
-    "patient_name": "Eliana Matias",
-    "date_prepared": "2025-09-29",
-    "currency": "USD",
-    "treatment_focus": "Two-visit implant restoration: 3 Straumann Group Medentika® implants (Visit 1) and 4 zirconium crowns (Visit 2).",
-    "hotel_nights_total": 10,
-    "visits": [
-      {
-        "title": "First Visit (5 Days)",
-        "hotel_nights": 5,
-        "bullets": [
-          "Placement of 3 Straumann Group Medentika® implants",
-          "Bone graft and membrane may be required, confirmed after 3D scans (CBCT/OPG)",
-          "Full post-operative care and medications"
-        ],
-        "line_items": [
-          { "label": "Straumann Group Medentika® Implant", "unit": "implant", "qty": 3, "unit_price": 900, "subtotal": 2700 },
-          { "label": "Hotel", "unit": "night", "qty": 5, "unit_price": 80, "subtotal": 400 }
-        ],
-        "item_label": "Implant Placement",
-        "item_desc": "Surgical placement of 3 implants. Bone graft and membrane are additional if needed.",
-        "amount": 3000
-      },
-      {
-        "title": "Second Visit (5 Days, after 3–6 months)",
-        "hotel_nights": 5,
-        "bullets": [
-          "Placement of 3 zirconia crowns on the healed implants and 1 zircomium crown replacement with the older one",
-          "Adjustment of bite and aesthetics",
-          "Follow-up checks during the stay"
-        ],
-        "line_items": [
-          { "label": "Zirconia Crown", "unit": "crown", "qty": 4, "unit_price": 350, "subtotal": 1400 },
-          { "label": "Hotel", "unit": "night", "qty": 5, "unit_price": 80, "subtotal": 400 }
-        ],
-        "item_label": "Crown Placement",
-        "item_desc": "4 zirconia crowns fitted onto the previously placed implants.",
-        "amount": 1700
-      }
-    ],
-    "visit1_pay_amount": 3000,
-    "visit2_pay_amount": 1700,
-    "price_valid_until": "2025-12-31",
-    "includes": [
-      "3D CBCT scan tomography",
-      "2D OPG full panoramic X-ray",
-      "Gumshield (mouthguard)",
-      "All transfers (airport–hotel–airport, hotel–clinic–hotel)",
-      "All injections",
-      "All medications (including antibiotics, painkillers, anti-swelling pills, and post-op drugs)"
-    ],
-    "excludes": [
-      "Flights and personal expenses",
-      "Bone graft (unit price: 250) – to be confirmed after scans",
-      "Membrane (unit price: 200) – to be confirmed after scans"
-    ]
-  }
+  "patient_name": "Eliana Matias",
+  "date_prepared": "2025-09-29",
+  "currency": "USD",
+  "treatment_focus": "Two-visit implant restoration: 3 Straumann Group Medentika® implants (Visit 1) and 4 zirconium crowns (Visit 2).",
+  "hotel_nights_total": 10,
+  "visits": [
+    {
+      "title": "First Visit (5 Days)",
+      "hotel_nights": 5,
+      "bullets": [
+        "Placement of 3 Straumann Group Medentika® implants",
+        "Bone graft and membrane may be required, confirmed after 3D scans (CBCT/OPG)",
+        "Full post-operative care and medications"
+      ],
+      "line_items": [
+        { "label": "Straumann Group Medentika® Implant", "unit": "implant", "qty": 3, "unit_price": 900, "subtotal": 2700 },
+        { "label": "Hotel", "unit": "night", "qty": 5, "unit_price": 80, "subtotal": 400 },
+        { "label": "10% Cash Discount", "unit": "discount", "qty": 1, "unit_price": -310, "subtotal": -310 }
+      ],
+      "item_label": "Implant Placement",
+      "item_desc": "Surgical placement of 3 implants. Bone graft and membrane are additional if needed.",
+      "amount": 2790
+    },
+    {
+      "title": "Second Visit (5 Days, after 3–6 months)",
+      "hotel_nights": 5,
+      "bullets": [
+        "Placement of 3 zirconium crowns on the healed implants and 1 zirconium crown replacement for the older one",
+        "Adjustment of bite and aesthetics",
+        "Follow-up checks during the stay"
+      ],
+      "line_items": [
+        { "label": "Zirconium Crown", "unit": "crown", "qty": 4, "unit_price": 350, "subtotal": 1400 },
+        { "label": "Hotel", "unit": "night", "qty": 5, "unit_price": 80, "subtotal": 400 },
+        { "label": "10% Cash Discount", "unit": "discount", "qty": 1, "unit_price": -180, "subtotal": -180 }
+      ],
+      "item_label": "Crown Placement",
+      "item_desc": "4 zirconium crowns fitted onto the previously placed implants.",
+      "amount": 1620
+    }
+  ],
+  "visit1_pay_amount": 2790,
+  "visit2_pay_amount": 1620,
+  "price_valid_until": "2025-12-31",
+  "includes": [
+    "3D CBCT scan tomography",
+    "2D OPG full panoramic X-ray",
+    "Gumshield (mouthguard)",
+    "All transfers (airport–hotel–airport, hotel–clinic–hotel)",
+    "All injections",
+    "All medications (including antibiotics, painkillers, anti-swelling pills, and post-op drugs)"
+  ],
+  "excludes": [
+    "Flights"
+  ]
+}
+
   </script>
 
   <!-- ==== SCRIPT ============================================================ -->
