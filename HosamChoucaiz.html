@@ -157,9 +157,9 @@
       <button onclick="window.print()" class="no-print" style="padding:12px 16px; border-radius:12px; border:1px solid #E5E7EB; background:#FFFFFF; font-size:14px; cursor:pointer;">Print / Save as PDF</button>
     </div>
 
-    <p class="footnote" style="margin-top:14px;">
+    <!-- <p class="footnote" style="margin-top:14px;">
       Brand note: Implants are <strong>Straumann Group Medentika<sup>®</sup></strong>. Implant workflows are planned in <strong>two visits</strong>.
-    </p>
+    </p> -->
 
     <!-- ====== MISSING ELEMENTS ADDED BELOW ====== -->
     <div style="margin-top:24px;">
@@ -179,7 +179,7 @@
   "patient_name": "Hosam Choucaiz",
   "date_prepared": "2025-09-29",
   "currency": "USD",
-  "treatment_focus": "Conservative plan based on photos (no full extractions expected): 15 extractions, 2 Straumann Group Medentika® implants, root canal + white filling on 2 lower incisors, and zirconium crowns on natural teeth; implant-supported zirconium crowns placed at the second visit. Doctor currently does not expect full-mouth All-on-4/All-on-6 to be necessary; final plan depends on X-rays/CBCT. If scans show advanced periodontal destruction, the requested All-on options can be reconsidered. Treatment timing is 5 days per visit (5 + 5, total 10 days).",
+    "treatment_focus": "Conservative plan based on photos: 1 simple extraction, 2 Straumann Group Medentika® implants, root canal + white fillings on 2 lower incisors, zirconium crowns on both jaws, and zirconium crowns placed on implants during the second visit. Doctor does not currently expect a full-mouth All-on-4/All-on-6 to be necessary; final plan depends on X-rays/CBCT. If advanced periodontal issues are visible only on scans, All-on options may still be reconsidered. Treatment timing is 5 days per visit (5 + 5, total 10 days).",
   "visits": [
     {
       "title": "First Visit (5 Days) – Surgery & Restorations on Natural Teeth",
@@ -195,9 +195,9 @@
         {
           "label": "Tooth Extraction (simple)",
           "unit": "tooth",
-          "qty": 15,
+          "qty": 1,
           "unit_price": 35,
-          "subtotal": 525
+          "subtotal": 35
         },
         {
           "label": "Straumann Group Medentika® Implant",
@@ -221,21 +221,14 @@
           "subtotal": 118
         },
         {
-          "label": "Zirconium Crown (natural tooth)",
-          "unit": "crown",
-          "qty": 12,
-          "unit_price": 239,
-          "subtotal": 2868
-        },
-        {
           "label": "10% Cash Discount",
           "unit": "discount",
           "qty": 1,
-          "unit_price": -490.7,
-          "subtotal": -490.7
+          "unit_price": -155,
+          "subtotal": -155
         }
       ],
-      "amount": 4416.3
+      "amount": 1394
     },
     {
       "title": "Second Visit (after 3–6 months, 5 Days) – Implant Crowns",
@@ -248,25 +241,32 @@
       "item_desc": "Zirconium crowns on 2 healed implants.",
       "line_items": [
         {
-          "label": "Zirconium Crown (implant-supported)",
+          "label": "Zirconium Crown (upper jaw)",
           "unit": "crown",
-          "qty": 2,
+          "qty": 14,
           "unit_price": 239,
-          "subtotal": 478
+          "subtotal": 3346
+        },
+        {
+          "label": "Zirconium Crown (lower jaw)",
+          "unit": "crown",
+          "qty": 14,
+          "unit_price": 239,
+          "subtotal": 3346
         },
         {
           "label": "10% Cash Discount",
           "unit": "discount",
           "qty": 1,
-          "unit_price": -47.8,
-          "subtotal": -47.8
+          "unit_price": -669,
+          "subtotal": -669
         }
       ],
       "amount": 430.2
     }
   ],
-  "visit1_pay_amount": 4416.3,
-  "visit2_pay_amount": 430.2,
+  "visit1_pay_amount": 1394,
+  "visit2_pay_amount": 7417,
   "price_valid_until": "2025-10-29",
   "includes": [
     "3D CBCT scan tomography",
