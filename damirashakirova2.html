@@ -94,9 +94,9 @@
           <div class="hr"></div>
           <div class="pill">Excludes / Optional</div>
           <ul id="excludes-list" class="bullets" style="margin-top:8px;"></ul>
-          <div class="warn" id="tbd-note" style="display:none;margin-top:10px;">
+          <!-- <div class="warn" id="tbd-note" style="display:none;margin-top:10px;">
             Some surgical extras (e.g., bone graft, membrane) are <strong>to be confirmed after scans</strong> and are not included in totals.
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -157,10 +157,6 @@
       <button onclick="window.print()" class="no-print" style="padding:12px 16px; border-radius:12px; border:1px solid #E5E7EB; background:#FFFFFF; font-size:14px; cursor:pointer;">Print / Save as PDF</button>
     </div>
 
-    <p class="footnote" style="margin-top:14px;">
-      Brand note: Implants are <strong>Straumann Group Medentika<sup>®</sup></strong>. Implant workflows are planned in <strong>two visits</strong>.
-    </p>
-
     <!-- ====== MISSING ELEMENTS ADDED BELOW ====== -->
     <div style="margin-top:24px;">
       <button id="toggle-notes" class="no-print" style="padding:8px 12px; border-radius:8px; border:1px solid #E5E7EB; background:#f3f4f6; font-size:14px; cursor:pointer;">Show Clinical Notes</button>
@@ -176,7 +172,7 @@
   <script id="plan-data" type="application/json">
       {
 "patient_name": "Damira Shakirova",
-"date_prepared": "2025-09-29",
+"date_prepared": "2025-09-30",
 "currency": "USD",
 "treatment_focus": "Two-visit implant and crown restoration: Upper jaw — 13 zirconium crowns and 6 abutments on existing implants. Lower jaw — All-on-6 (Straumann Group Medentika®) after full extractions and removal of 2 failed implants; final restoration with 12 zirconium crowns. Permanent crowns for upper and lower should be designed and fitted together for ideal bite, esthetics, and symmetry. Healing/spacing between visits: minimum 6 months (longer is fine).",
 "hotel_nights_total": 10,
@@ -191,24 +187,13 @@
 "Healing and integration period follows (minimum 3–6 months)."
 ],
 "line_items": [
-{
-"label": "Straumann Group Medentika® Implant",
-"unit": "implant",
-"qty": 6,
-"unit_price": 639,
-"subtotal": 3834
-},
-{
-"label": "Hotel stay",
-"unit": "night",
-"qty": 5,
-"unit_price": 0,
-"subtotal": 0
-}
+{ "label": "Straumann Group Medentika® Implant", "unit": "implant", "qty": 6, "unit_price": 639, "subtotal": 3834 },
+{ "label": "Hotel stay", "unit": "night", "qty": 5, "unit_price": 80, "subtotal": 400 },
+{ "label": "10% Cash Discount", "unit": "discount", "qty": 1, "unit_price": -423.4, "subtotal": -423.4 }
 ],
 "item_label": "Surgical phase (implants)",
 "item_desc": "Lower jaw All-on-6 implant placement with temporaries; extractions/removals assessed after scans.",
-"amount": 3450.6
+"amount": 3810.6
 },
 {
 "title": "Second Visit (After 3–6 Months, 5 Days)",
@@ -220,42 +205,20 @@
 "Treatment completed with permanent restorations."
 ],
 "line_items": [
-{
-"label": "Zirconium Crown (upper jaw)",
-"unit": "crown",
-"qty": 13,
-"unit_price": 239,
-"subtotal": 3107
-},
-{
-"label": "Abutment",
-"unit": "abutment",
-"qty": 6,
-"unit_price": 0,
-"subtotal": 0
-},
-{
-"label": "Zirconium Crown (lower jaw)",
-"unit": "crown",
-"qty": 12,
-"unit_price": 239,
-"subtotal": 2868
-},
-{
-"label": "Hotel stay",
-"unit": "night",
-"qty": 5,
-"unit_price": 0,
-"subtotal": 0
-}
+{ "label": "Zirconium Crown (upper jaw)", "unit": "crown", "qty": 13, "unit_price": 239, "subtotal": 3107 },
+{ "label": "Abutment", "unit": "abutment", "qty": 6, "unit_price": 200, "subtotal": 1200 },
+{ "label": "Zirconium Crown (lower jaw)", "unit": "crown", "qty": 12, "unit_price": 239, "subtotal": 2868 },
+{ "label": "Hotel stay", "unit": "night", "qty": 5, "unit_price": 80, "subtotal": 400 },
+{ "label": "10% Cash Discount", "unit": "discount", "qty": 1, "unit_price": -758, "subtotal": -758 }
 ],
 "item_label": "Prosthetic phase (zirconium crowns & abutments)",
 "item_desc": "Design and fit all permanent crowns together for accurate bite and symmetry.",
-"amount": 5377.5
+"amount": 7084.3
 }
 ],
-"visit1_pay_amount": 3450.6,
-"visit2_pay_amount": 5377.5,
+"visit1_pay_amount": 3810.6,
+"visit2_pay_amount": 6817,
+"price_valid_until": "2025-12-31",
 "includes": [
 "3D CBCT scan tomography",
 "2D OPG full panoramic X-ray",
@@ -267,11 +230,14 @@
 "excludes": [
 "Bone grafting – 140 USD per cc (To be confirmed after scans)",
 "Membrane – 160 USD per unit (To be confirmed after scans)",
+"Sinus lifting – 175 USD each (To be confirmed after scans)",
 "Tooth extraction – 35 USD per tooth (quantity to be confirmed after scans)",
 "Wisdom tooth extraction – 119 USD per tooth (if required; to be confirmed after scans)",
-"Implant removal (2 units) – To be confirmed after scans (unit price not listed)"
+"Implant removal – unit price not listed (2 units planned; to be confirmed after scans)",
+"Flights"
 ]
 }
+
   </script>
 
   <!-- ==== SCRIPT ============================================================ -->
